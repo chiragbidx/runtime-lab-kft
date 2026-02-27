@@ -5,3 +5,42 @@
 :root {
   --bs-body-bg: var(--bs-gray-100);
 }
+
+/* Section Spacing and Headlines */
+section {
+  scroll-margin-top: 80px;
+}
+
+h1, .display-5, h2, .fw-bold {
+  letter-spacing: -0.5px;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+/* Hero Image */
+@media (max-width: 991.98px) {
+  .hero-img {
+    margin-bottom: 2rem;
+  }
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+/* FAQ Accordion Headings */
+.accordion-header button {
+  font-size: 1.075rem;
+}
+
+/* Contact form */
+#contact .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
+}
+
+/* Footer */
+footer {
+  font-size: 1rem;
+}
