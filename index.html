@@ -50,7 +50,7 @@
             <a href="#features" class="btn btn-outline-secondary btn-lg px-4">Learn More</a>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 text-center">
-            <img src="https://pixabay.com/get/ge1b295783f3baecbd630a18457cbf8b22bbda8d34205ca6f010f1dc5a9189f150215a382fd6ecca1e076da3dca1c75047d4416d9a833f41044641f6e8a4cb1c9_640.jpg" class="img-fluid rounded shadow" alt="Illustration of SaaS product dashboard">
+            <img src="https://pixabay.com/get/gff1d5976b97b44aca67ef70e2ee812a5bf92f98459f0b9abcf35f706f08fa9c2bc32c29be1ae5d5f8cb29a04afc0ca90a7d54cb7d04e783057dd42d4be0b617e_640.jpg" class="img-fluid rounded shadow" alt="Illustration of SaaS product dashboard">
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
-            <img src="https://pixabay.com/get/gdfdd4589867d60f0ee1837f7a4b5ce23d372ee31f0c8e82631c5893dbf3f33052c18137c87975a567107059307c6f0a3_640.jpg" class="img-fluid rounded shadow" alt="Team at work">
+            <img src="https://pixabay.com/get/g716cb0c1d6173a8c457f866efcbd93cf2758ccc3279cf5e0528288305c30edbaef1a92d2634bd2ec91344abb4fcef259_640.jpg" class="img-fluid rounded shadow" alt="Team at work">
           </div>
           <div class="col-lg-6">
             <h2 class="fw-bold">Why SaaSBrand?</h2>
@@ -351,21 +351,37 @@
             <div class="bg-white rounded-3 shadow p-4 p-md-5">
               <h3 class="fw-bold mb-3">Contact Us</h3>
               <p class="mb-4 text-muted">Have questions? Reach out—our team typically replies in under 24 hours.</p>
-              <form>
-                <div class="mb-3">
-                  <label for="contact-name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="contact-name" name="name" required>
-                </div>
-                <div class="mb-3">
-                  <label for="contact-email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="contact-email" name="email" required>
-                </div>
-                <div class="mb-3">
-                  <label for="contact-message" class="form-label">Message</label>
-                  <textarea class="form-control" id="contact-message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary px-4">Send Message</button>
-              </form>
+              <!--
+                PANDA CONTACT FORM
+                ==================
+                This block renders the Panda Contact Form.
+
+                Usage:
+                - Place the <div data-panda-contact> where the form should appear.
+                - The external script automatically renders the form and handles submission.
+
+                Required:
+                - data-panda-contact  → form mount point
+                - data-endpoint       → backend POST URL (Supabase function)
+                - data-to-email       → destination email (validated server-side)
+
+                Rules:
+                - Do NOT add a <form> inside this div.
+                - Do NOT add input fields manually.
+                - Do NOT remove required data attributes.
+                - Include the script ONLY ONCE per page.
+              -->
+              <div
+                data-panda-contact
+                data-endpoint="https://bfwqdadlcyndtaqmqtci.supabase.co/functions/v1/panda-contact"
+                data-to-email="hi@chirag.co"
+                data-success="Thanks! We’ll get back to you shortly."
+              ></div>
+              <!-- Panda Contact Form Script (required) -->
+              <script
+                src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-contact.js"
+                defer
+              ></script>
               <div class="mt-4 small">
                 Or email us: <a href="mailto:hi@chirag.co">hi@chirag.co</a>
               </div>
